@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Helvetica', 'Arial',sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 400;
+}
+
+a{
+  color: black;
+}
+
+header {
+  height: 100.8px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%), 0 2px 2px rgb(0 0 0 / 6%),0 0 2px rgb(0 0 0 / 7%);
+  z-index: 10;
+  position: relative;
+  
+}
+
+/* height:100% implies 100% of the parent container's height. If you want to use this method to make a div 100% of the page's height, you have to specify the height as 100% of the body and html as well */
+
+/* WHEN YOU DO NOT SPECIFY A HTML OR BODY HEIGHT, THEIR HEIGHTS ARE THE SUM OF THE HEIGHTS OF THE ELEMENTS IN IT */
+
+.logo {
+  height: 51px;
+  width: 51px;
+}
+
+/* The logo container's dimensions are 51x51. And we want the logo to take up the entire available space of the container. Thus specifying a width and height of 100% each */
+/* Recollect Naz's peanut box analogy */
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.header-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 100%; 
+  display: flex;
+  /* So that we have the left-nav and the right-nav beside each other instead of being stacked one on top of another. Then we are aligning stuff vertically. I am not taking the justify-content approach here, instead we will apply a margin-left:auto to the right nav */
+  /* background: goldenrod; */
+}
+
+.left-nav {
+  /* background: hotpink; */
+  display: flex;
+  align-items: center;
+  /* height: 100%;  */
+}
+
+.left-nav ul {
+  list-style-type: none;
+  display: flex;
+  margin-left: 10px;
+}
+
+.left-nav li {
+  /* background: coral; */
+  text-transform: uppercase;
+  padding-left: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Cool trick to know the color on hover, right click on the element and select force state! */
+.left-nav li:hover{
+  color: #008248;
+}
+
+.right-nav{
+  /* Pushing the right-nav towards the right using margin-left:auto */
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  /* background: rgb(255, 0, 0); */
+  /* height: 100%; */
+}
+
+.store-location span{
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  margin-left: 8px;
+  margin-right: 40px;
+}
+
+.store-location i{
+  font-size: 24px;
+  /* WE CAN CHANGE THE SIZE OF ICONS USING FONT-SIZE! IT IS ESSENTIALLY A TEXT ELEMENT, NOT AN IMAGE! */
+}
+
+.store-location{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.store-location:hover{
+  color: #008248;
+}
+
+.sign-in, .join{
+  padding: 7px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+}
+
+.sign-in{
+  margin-right: 16px;
+}
+
+.sign-in:hover{
+  background-color: rgba(0,0,0,.06);
+}
+
+.join{
+  background: black;
+  color: white;
+}
+
+.join:hover{
+  background-color: rgba(0,0,0,.7);
+  border-color: rgba(0,0,0,.7);
+}
+
+

@@ -1,0 +1,157 @@
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* AN IMPORTANT THING TO NOTE IS, OUR MINT GREEN CONTAINER IS COVERING THE BOX SHADOW OF OUR HEADER. IT IS NOT VISIBLE. IT IS COVERING THE BOX SHADOW OF THE HEADER AND NOT ALLOWING IT TO PASS THROUGH. THINK OF IT AS THOUGH THE MINT GREEN CONTAINER IS PRESENT ON TOP OF THE HEADER AND COVERING IT */
+/* THIS IS BECAUSE OF Z-INDEX WHICH WE CAN FIX */
+.announcements {
+  background: #d8e8e3;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.announcements span {
+  display: inline-block;
+  /* background: hotpink; */
+  max-width: 50%;
+  /* We are giving a max-width to the span because this is the max amount of text as seen on the official starbucks page that can fit into. On smaller screens, the text can flow onto multiple lines on smaller screens */
+  text-align: center;
+  font-size: 19px;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+.announcements span a:hover {
+  text-decoration: none;
+}
+
+.rewards,
+.beverages {
+  display: flex;
+  margin-bottom: 32px;
+  /* IMPORTANT CHECKPOINT! THIS IS WHERE WE HAVE APPLIED OUR MARGIN */
+}
+
+/* Both text section and image section take up equal 50% of the width */
+
+.text {
+  /* WE CAN ALSO APPLY FLEX:1 AS AN ALTERNATE OF APPLYING WIDTH 50% TO BOTH TEXT AND IMAGE CONTAINER*/
+  width: 50%;
+  background: #1e3932;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text p {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.rewards .text p {
+  max-width: 70%;
+}
+
+.image {
+  width: 50%;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 625px according to official starbucks website is the height of both text and image sections */
+
+.text .cta, .text-content .cta {
+  padding: 7px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+  margin-top: 32px;
+}
+
+.text .cta:hover {
+  background: hsla(0, 0%, 100%, 0.12);
+}
+
+.beverages .text {
+  background: #f2f0eb;
+  color: #1e3932;
+  text-align: center;
+}
+
+.beverages .text h1 {
+  font-size: 50px;
+  letter-spacing: 8px;
+  margin-bottom: 24px;
+}
+
+.beverages .text p {
+  max-width: 69%;
+}
+
+.beverages .text .cta {
+  border: 1px solid black;
+}
+
+.beverages .text .cta:hover, .text-content .cta:hover {
+  background-color: rgba(30, 57, 50, 0.1);
+}
+
+
+/* CARDS SECTION */
+.cards{
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.card1{
+  margin-right: 32px;
+}
+
+.card1, .card2{
+  background: #d4e9e2;
+  width: 50%;
+}
+
+.graphic img{
+  width: 100%;
+  height: 100%;
+}
+
+.text-content{
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 32px;
+    padding-top: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1e3932;
+}
+
+.text-content h1{
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.text-content p{
+  max-width: 95%;
+  line-height: 1.75;
+  font-size: 19px;
+}
+
+.text-content .cta{
+  border: 1px solid black;
+}
